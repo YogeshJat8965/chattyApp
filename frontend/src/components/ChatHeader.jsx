@@ -2,8 +2,8 @@ import { X } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
 import { useChatStore } from "../store/useChatStore";
 
-const ChatHeader = () => {
-  const { selectedUser, setSelectedUser } = useChatStore();
+const ChatHeader = ({ handleChatClose }) => {
+  const { selectedUser } = useChatStore();
   const { onlineUsers } = useAuthStore();
 
   return (
@@ -27,7 +27,7 @@ const ChatHeader = () => {
         </div>
 
         {/* Close button */}
-        <button onClick={() => setSelectedUser(null)}>
+        <button onClick={handleChatClose}>
           <X />
         </button>
       </div>

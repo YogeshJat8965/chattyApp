@@ -109,13 +109,13 @@ const Sidebar = () => {
         )}
       </div>
 
-      {isChatSelected && (
-        <div className="absolute bottom-4 right-4">
+      {/* {isChatSelected && (
+        <div className="absolute top-5 right-8">
           <button onClick={handleChatClose}>
             <X />
           </button>
         </div>
-      )}
+      )} */}
     </aside>
   );
 };
